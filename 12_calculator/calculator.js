@@ -7,8 +7,7 @@ const subtract = function(a, b) {
 };
 
 const sum = function(arr) {
-  if (arr.length === 0) return 0
-	return arr.reduce( (sum, acc) => sum + acc);
+	return arr.reduce( (sum, acc) => sum + acc, 0);
 };
 
 const multiply = function(arr) {
@@ -21,10 +20,7 @@ const power = function(num, pow) {
 
 const factorial = function(n) {
   let result = 1;
-  
-  if (n === 0) return result;
-
-  for(let i = 2; i <= n; i++){
+  for(let i = n; i > 0; i--){
     result *= i;
   }
   return result
